@@ -11,6 +11,8 @@ RUN go build -o doit main.go
 
 FROM scratch
 
+USER 1001
+
 WORKDIR /app
 
 COPY --from=builder /opt/app-root/src/doit .
